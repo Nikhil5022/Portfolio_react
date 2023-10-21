@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './Projects.css';
 import cf1 from './Images/cf1.jpg';
 import cf2 from './Images/cf2.jpg';
@@ -18,6 +18,7 @@ import profile from './Images/profile.png';
 import github from './Images/github.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Carousel from 'react-bootstrap/Carousel';
 
 
 export default function Projects() {
@@ -39,30 +40,37 @@ export default function Projects() {
             product.
           </p>
           <div className='cinefiles'>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src={cf1} alt="First slide"/>
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src={cf2} alt="Second slide"/>
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src={cf3} alt="Third slide"/>
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src={cf4} alt="Third slide"/>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+            <Carousel fade>
+              <Carousel.Item >
+                <img
+                  className="d-block w-100"
+                  src={cf1}
+                  alt="First slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item >
+                <img
+                  className="d-block w-100"
+                  src={cf2}
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item >
+                <img
+                  className="d-block w-100"
+                  src={cf3}
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item >
+                <img
+                  className="d-block w-100"
+                  src={cf4}
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+
+            </Carousel>
           </div>
         </div>
         <hr style={{ color: "white", padding: '5px' }} />
