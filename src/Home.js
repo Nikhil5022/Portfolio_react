@@ -1,5 +1,4 @@
 import React from 'react'
-import Typed from 'react-typed';
 import './About.css';
 import bgImage from './Images/bg.png';
 
@@ -17,17 +16,6 @@ export default function Home() {
                             I am a passionate{' '}
                         </h2>{' '}
                         <br />
-                        <Typed
-                            strings={[
-                                'Full Stack Developer.',
-                                'Software Engineer.',
-                                'Web Developer.',
-                            ]}
-                            typeSpeed={40}
-                            backSpeed={60}
-                            loop
-                            className="typed-text"
-                        />
                     </div>
                     <div className="picture">
                         <img src={bgImage} alt="" />
