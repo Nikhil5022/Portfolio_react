@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './Projects.css';
 import cf1 from './Images/cf1.jpg';
 import cf2 from './Images/cf2.jpg';
@@ -16,7 +16,8 @@ import forum4 from './Images/forum4.png';
 import contactus from './Images/contactus.png';
 import profile from './Images/profile.png';
 import github from './Images/github.png';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 export default function Projects() {

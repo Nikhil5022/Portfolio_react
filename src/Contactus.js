@@ -6,7 +6,7 @@ import instagram from './Images/insta.gif';
 export default function ContactUs() {
     return (
         <div className="contact">
-            <h2>Contact</h2>
+            <h2>Contact Me</h2>
             <p>Feel free to get in touch for exciting opportunities or potential collaborations :</p>
             <ul>
                 <li>
