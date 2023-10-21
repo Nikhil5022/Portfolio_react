@@ -33,7 +33,7 @@ h2 {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.25rem;
 }
-.typed-text{
+.typed{
     font-family: "Abhaya Libre", serif;
   font-family: "Bebas Neue", sans-serif;
   font-family: "Poppins", sans-serif;
@@ -100,13 +100,7 @@ h2 {
 }
 
 @media screen and (min-width: 480px) {
-  /* about.css */
-  .typed-text {
-    font-family: "Open Sans", sans-serif;
-    color: rgb(170, 107, 228);
-    font-weight: bold;
-    font-size: 50px;
-  }
+ 
 
   .about {
     display: flex;

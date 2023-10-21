@@ -32,7 +32,7 @@ export default function Home() {
                             I am a passionate{' '}
                         </h2>{' '}
                         <br />
-                        <h2 style={{ color: '#aa6be4' }}>
+                        <h2 className='typed' style={{ color: '#aa6be4' }}>
                             <span ref={el} />
                         </h2>
                     </div>
