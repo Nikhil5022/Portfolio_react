@@ -57,6 +57,7 @@
   .navbar{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 15px;
   }
 }
 @media screen and (max-width: 480px) {
