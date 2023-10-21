@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Projects.css';
 import cf1 from './Images/cf1.jpg';
 import cf2 from './Images/cf2.jpg';
@@ -100,7 +100,79 @@ export default function Projects() {
             <b style={{ fontSize: "1rem", padding: "2px" }}>Description</b>:
             This project is about creating a two-interface website for the Department of Emergent Technologies (ET). The first interface handles event management, making it easier to organize, track, and engage participants in emerging technology-related activities. The second interface is for data management, ensuring the secure organization and storage of documents relevant to emergent technologies. This solution enhances departmental efficiency, promotes collaboration, and prioritizes data security in the ever-evolving field of emergent technologies.</p>
           <div className='etwebsite'>
+          <Carousel fade>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={home}
+                    alt="First slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={home2}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={home3}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={faculty}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={forum1}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={forum2}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={forum3}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={forum4}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={profile}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item >
+                  <img
+                    className="d-block w-100"
+                    src={contactus}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
 
+              </Carousel>
           </div>
         </div>
       </div>
