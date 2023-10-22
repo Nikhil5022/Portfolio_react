@@ -27,6 +27,43 @@ export default function About() {
                     <img src={ebox} alt="ebox certificate" />
                 </div>
             </div>
+            <h2 style={{color:'white'}}>Skills</h2>
+            <div className='skills'>
+                <div>
+                    <h3>Development Skills</h3>
+                    <div className='devskills'>
+                        <b>Angular</b>:Expert<br />
+                        <b>React</b>:Intermediate<br />
+                        <b>Node</b>:Expert<br />
+                        <b>Express</b>:Intermediate<br />
+                        <b>HTML</b>:Expert<br />
+                        <b>CSS</b>:Intermediate<br />
+                    </div>
+                </div>
+                <div>
+                    <h3>Programming Languages</h3>
+                    <div className='languages'>
+                        <b>Java</b>:Expert<br />
+                        <b>Python</b>:Intermediate<br />
+                        <b>C</b>:Intermediate<br />
+                        <b>Java Script</b>:Intermediate<br />
+                    </div>
+                </div>
+                <div>
+                    <h3>Database Management Systems</h3>
+                    <div className='dbms'>
+                        <b>MongoDB</b>:Intermediate<br />
+                        <b>SQL</b>:Intermediate<br />
+                    </div>
+                </div>
+                <div>
+                    <h3>Version Control</h3>
+                    <div className='version'>
+                        <b>Git</b>:Intermediate<br />
+                        <b>GitHub</b>:Intermediate<br />
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

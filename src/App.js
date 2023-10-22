@@ -8,7 +8,7 @@ import Contactus from './Contactus.js';
 function App() {
   const isMobile = window.innerWidth <= 480; // Adjust the breakpoint as needed
 
-  const offsetValue = isMobile ? -150 : -100; // Set different offsets for mobile and laptop
+  const offsetValue = isMobile ? -150 : -120; // Set different offsets for mobile and laptop
 
   const handleScroll = () => {
     const navbar = document.querySelector('.navbar');
@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <div className="navbar">
-        <h1 style={{ color: 'white', cursor: 'pointer' }} onClick={handleclick}>NIKHIL'S PORTFOLIO</h1>
+        <h1 style={{ color: 'white', cursor: 'pointer' }} onClick={handleclick}><span style={{fontSize:'3.5rem',backgroundColor:' rgb(18, 18, 62)'}}>N</span>ikhil's Portfolio</h1>
         <div className='navitems'>
           <ul>
             <li><a href="#/" onClick={handleclick} style={{textDecoration:'none'}}>Home</a></li>

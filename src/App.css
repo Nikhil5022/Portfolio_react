@@ -28,7 +28,6 @@
   .navbar h1 {
     background-color: rgb(18, 18, 62);
     margin-top: 3px;
-    padding: 2px;
     font-family: "Abhaya Libre", serif;
     font-family: "Bebas Neue", sans-serif;
     font-family: "Poppins", sans-serif;
@@ -53,6 +52,12 @@
   }
   .navitems ul li:hover {
     cursor: pointer;
+    color: #aa6be4;
+    text-decoration: underline;
+  }
+  .navitems ul li a:hover {
+    cursor: pointer;
+    color: #aa6be4;
   }
   .navbar{
     display: grid;
@@ -68,7 +73,6 @@
     color: white;
     background-color: rgb(18, 18, 62);
     text-align: center;
-    padding: 15px;
   }
   .navitems {
     background-color: rgb(18, 18, 62);
