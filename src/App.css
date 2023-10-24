@@ -81,7 +81,7 @@
     flex-direction: row;
     justify-content: space-around;
     background-color: rgb(18, 18, 62);
-    gap: 10px;
+    gap: 5px;
   }
   .navitems ul li {
     list-style-type: none;
@@ -89,5 +89,8 @@
     padding-right: 10px;
     background-color: rgb(18, 18, 62);
     color: white;
+  }
+  .navbar li{
+    margin: auto;
   }
 }

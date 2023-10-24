@@ -58,12 +58,13 @@ function App() {
             <li><Link to="projects" smooth={true} offset={offsetValue} duration={100}>Projects</Link></li>
             <li><Link to="contact" smooth={true} offset={offsetValue} duration={100}>Contact Me</Link></li>
             <li className='resume'><a href="#/ " style={{ textDecoration: 'none' }} onClick={openresume}>Resume</a></li>
-            <li><ReactSwitch
+            
+          </ul>
+        </div>
+        <li><ReactSwitch
               checked={checked}
               onChange={handleChange}
             /></li>
-          </ul>
-        </div>
       </div>
       <Home />
       <Element name="about">
