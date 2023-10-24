@@ -4,11 +4,27 @@ import Projects from './Projects.js';
 import Home from './Home';
 import { Link, Element, Events } from 'react-scroll';
 import Contactus from './Contactus.js';
+import ReactSwitch from 'react-switch';
+import { useState } from 'react';
 
 function App() {
   const isMobile = window.innerWidth <= 480; // Adjust the breakpoint as needed
 
   const offsetValue = isMobile ? -150 : -120; // Set different offsets for mobile and laptop
+  const [checked, setChecked] = useState(false);
+  document.body.style.backgroundColor = checked ? 'rgb(0, 0, 33)' : 'rgb(74, 78, 112)';
+  const handleChange = val => {
+    setChecked(val)
+    console.log(val);
+    if(!val){
+      document.body.style.backgroundColor ='rgb(74, 78, 112)';
+      console.log('dark');
+    }
+    else{
+      document.body.style.backgroundColor ='rgb(0,0,33)';
+      console.log('light');
+    }
+  }
 
   const handleScroll = () => {
     const navbar = document.querySelector('.navbar');
@@ -34,14 +50,18 @@ function App() {
   return (
     <>
       <div className="navbar">
-        <h1 style={{ color: 'white', cursor: 'pointer' }} onClick={handleclick}><span style={{fontSize:'3.5rem',backgroundColor:' rgb(18, 18, 62)'}}>N</span>ikhil's Portfolio</h1>
+        <h1 style={{ color: 'white', cursor: 'pointer' }} onClick={handleclick}><span style={{ fontSize: '3.5rem', backgroundColor: ' rgb(18, 18, 62)' }}>N</span>ikhil's Portfolio</h1>
         <div className='navitems'>
           <ul>
-            <li><a href="#/" onClick={handleclick} style={{textDecoration:'none'}}>Home</a></li>
+            <li><a href="#/" onClick={handleclick} style={{ textDecoration: 'none' }}>Home</a></li>
             <li><Link to="about" smooth={true} offset={offsetValue} duration={100}>About</Link></li>
             <li><Link to="projects" smooth={true} offset={offsetValue} duration={100}>Projects</Link></li>
             <li><Link to="contact" smooth={true} offset={offsetValue} duration={100}>Contact Me</Link></li>
-            <li className='resume'><a href="#/ " style={{textDecoration:'none'}} onClick={openresume}>Resume</a></li>
+            <li className='resume'><a href="#/ " style={{ textDecoration: 'none' }} onClick={openresume}>Resume</a></li>
+            <li><ReactSwitch
+              checked={checked}
+              onChange={handleChange}
+            /></li>
           </ul>
         </div>
       </div>
