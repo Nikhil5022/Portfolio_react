@@ -97,9 +97,24 @@ h2 {
     text-align: center;
     margin: 10px;
   }
-  
-  .skills{
+
+  .skills {
     display: none;
+  }
+  .aboutme img {
+    opacity: 0;
+  }
+
+  .aboutme img.active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+  .details p {
+    opacity: 0;
+  }
+  .details p.active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
   }
 }
 
@@ -110,6 +125,7 @@ h2 {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin: 20px;
   }
 
   .content {
@@ -167,6 +183,8 @@ h2 {
   .details {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    overflow-y: hidden;
   }
   .details img {
     width: 300px;
@@ -175,13 +193,15 @@ h2 {
     margin-right: auto;
     width: 15%;
     padding: 10px;
-    border-radius: 100px;
+    border-radius: 80px;
+    box-shadow: 20px;
   }
   .details p {
     color: white;
     text-align: center;
     padding: 10px;
   }
+
   .skills {
     display: flex;
     flex-direction: row;
@@ -190,7 +210,76 @@ h2 {
     margin: 20px;
     color: white;
   }
-  .languages{
+  .languages {
     margin-top: 0px;
   }
+  .aboutme img {
+    opacity: 0;
+  }
+
+  .aboutme img.active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+  .details p {
+    opacity: 0;
+  }
+  .details p.active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+  .first {
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  .second {
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+
+  .first img {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .first img.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .first p {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: transform 0.5s ease-in;
+  }
+  .first p.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .second img {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: transform 0.5s ease-in;
+  }
+  .second img.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .second p {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-in;
+  }
+  .second p.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .skills{
+    opacity: 0;
+  }
+  .skills.active{
+    opacity: 1;
+    transition: opacity 2s ease-in;
+  }
+  
 }

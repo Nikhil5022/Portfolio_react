@@ -8,9 +8,9 @@ import ReactSwitch from 'react-switch';
 import { useState } from 'react';
 
 function App() {
-  const isMobile = window.innerWidth <= 480; // Adjust the breakpoint as needed
-
-  const offsetValue = isMobile ? -150 : -120; // Set different offsets for mobile and laptop
+  const isMobile = window.innerWidth <= 480;
+  
+  const offsetValue = isMobile ? -150 : -120;
   const [checked, setChecked] = useState(false);
   document.body.style.backgroundColor = checked ? 'rgb(0, 0, 33)' : 'rgb(74, 78, 112)';
   const handleChange = val => {

@@ -19,9 +19,56 @@ import github from './Images/github.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Carousel from 'react-bootstrap/Carousel';
+import {useEffect,useRef} from 'react';
 
 
 export default function Projects() {
+  const project1para = useRef(null);
+  const project2para = useRef(null);
+  const project3para = useRef(null);
+  const project1img = useRef(null);
+  const project2img = useRef(null);
+  const project3img = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.1, // Trigger when 50% of the element is in the viewport
+    };
+    const intersectionCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if(entry.target === project1para.current) {
+            project1para.current.classList.add('active');
+          }
+          else if(entry.target === project2para.current) {
+            project2para.current.classList.add('active');
+          }
+          else if(entry.target === project3para.current) {
+            project3para.current.classList.add('active');
+          }
+          else if(entry.target === project1img.current) {
+            project1img.current.classList.add('active');
+          }
+          else if(entry.target === project2img.current) {
+            project2img.current.classList.add('active');
+          }
+          else if(entry.target === project3img.current) {
+            project3img.current.classList.add('active');
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+    const observer = new IntersectionObserver(intersectionCallback, options);
+    observer.observe(project1para.current);
+    observer.observe(project2para.current);
+    observer.observe(project3para.current);
+    observer.observe(project1img.current);
+    observer.observe(project2img.current);
+    observer.observe(project3img.current);
+  }, []);
   return (
     <>
       <div className='projects'>
@@ -31,7 +78,7 @@ export default function Projects() {
       <a href="https://github.com/Nikhil5022" rel="noreferrer" target='_blank'><img src={github} alt="" className='github' /></a>
       <div className='projectslists'>
         <div className='projectlist'>
-          <p><b style={{ fontSize: "1rem", padding: "2px" }}>Aim</b>: To Develop an Interactive website empowering users to discover, explore, and rate
+          <p ref={project1para}><b style={{ fontSize: "1rem", padding: "2px" }}>Aim</b>: To Develop an Interactive website empowering users to discover, explore, and rate
             movies. <br />
             <b style={{ fontSize: "1rem", padding: '2px' }}>TechStack</b>: Angular, Express JS, MongoDB, Tailwind CSS. <br />
             <b style={{ fontSize: "1rem", padding: "2px" }}>Description</b>: Developed a comprehensive IMDb clone project with user registration, search
@@ -39,7 +86,7 @@ export default function Projects() {
             showcasing adeptness in web development, teamwork, and delivering a user-friendly
             product.
           </p>
-          <div className='cinefiles'>
+          <div className='cinefiles' ref={project1img}>
             <Carousel fade>
               <Carousel.Item >
                 <img
@@ -74,16 +121,16 @@ export default function Projects() {
           </div>
         </div>
         <hr style={{ color: "white", padding: '5px' }} />
-        <div className='projectlist' id='projectextension'>
+        <div className='projectlist' id='projectextension'> 
           <div className='extension'>
-            <img
+            <img ref={project2img}
               className="d-block w-50"
               src={extension}
               alt="First slide"
             />
 
           </div>
-          <p><b style={{ fontSize: "1rem", padding: "2px" }}>Aim</b>: To Develop a Chrome Extension that is used to bookmark your websites for an
+          <p ref={project2para}><b style={{ fontSize: "1rem", padding: "2px" }} id='exten'>Aim</b>: To Develop a Chrome Extension that is used to bookmark your websites for an
             effortless daily experience. <br />
             <b style={{ fontSize: "1rem", padding: '2px' }}>TechStack</b>: Angular ,Express ,Tailwind CSS. <br />
             <b style={{ fontSize: "1rem", padding: "2px" }}>Description</b>: Created a user-friendly and efficient bookmarking Chrome extension that
@@ -95,11 +142,11 @@ export default function Projects() {
         </div>
         <hr style={{ color: "white", padding: '5px' }} />
         <div className='projectlist'>
-          <p><b style={{ fontSize: "1rem", padding: "2px" }}>Aim</b>: To Develop a Two Interface Website to handle the events and data of ET Department. <br />
+          <p ref={project3para}><b style={{ fontSize: "1rem", padding: "2px" }}>Aim</b>: To Develop a Two Interface Website to handle the events and data of ET Department. <br />
             <b style={{ fontSize: "1rem", padding: '2px' }}>TechStack</b>: Angular, Express JS, MongoDB, Tailwind CSS. <br />
             <b style={{ fontSize: "1rem", padding: "2px" }}>Description</b>:
             This project is about creating a two-interface website for the Department of Emergent Technologies (ET). The first interface handles event management, making it easier to organize, track, and engage participants in emerging technology-related activities. The second interface is for data management, ensuring the secure organization and storage of documents relevant to emergent technologies. This solution enhances departmental efficiency, promotes collaboration, and prioritizes data security in the ever-evolving field of emergent technologies.</p>
-          <div className='etwebsite'>
+          <div className='etwebsite' ref={project3img}>
           <Carousel fade>
                 <Carousel.Item >
                   <img
