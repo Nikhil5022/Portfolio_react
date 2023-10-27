@@ -5,26 +5,25 @@ import Home from './Home';
 import { Link, Element, Events } from 'react-scroll';
 import Contactus from './Contactus.js';
 import ReactSwitch from 'react-switch';
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 
 function App() {
   const isMobile = window.innerWidth <= 480;
   
   const offsetValue = isMobile ? -150 : -120;
   const [checked, setChecked] = useState(false);
-  document.body.style.backgroundColor = checked ? 'rgb(0, 0, 33)' : 'rgb(74, 78, 112)';
-  const handleChange = val => {
-    setChecked(val)
-    console.log(val);
-    if(!val){
-      document.body.style.backgroundColor ='rgb(74, 78, 112)';
-      console.log('dark');
-    }
-    else{
-      document.body.style.backgroundColor ='rgb(0,0,33)';
-      console.log('light');
-    }
-  }
+
+  useEffect(() => {
+    const darkMode = localStorage.getItem('darkmode') === 'true';
+    setChecked(darkMode);
+    document.body.style.backgroundColor = darkMode ? 'rgb(0, 0, 33)' : 'rgb(74, 78, 112)';
+  }, []);
+
+  const handleChange = (val) => {
+    setChecked(val);
+    localStorage.setItem('darkmode', val ? 'true' : 'false');
+    document.body.style.backgroundColor = val ? 'rgb(0, 0, 33)' : 'rgb(74, 78, 112)';
+  };
 
   const handleScroll = () => {
     const navbar = document.querySelector('.navbar');
